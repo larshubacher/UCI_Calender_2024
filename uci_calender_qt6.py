@@ -1,19 +1,24 @@
+#Importing the components we need
+from PySide6.QtWidgets import QApplication, QMainWindow, QPushButton
+
+#The sys module is responsible for processing commmand line arguments
 import sys
-from PyQt6 import QtWidgets
-from PyQt6.QtWidgets import QApplication, QMainWindow
-from PyQt6.QtGui import QIcon
 
-def window():
-    app = QApplication(sys.argv)
-    ## Create a window
-    win = QMainWindow()
-    ## Frist two parameters specify where the window pops up and the next two specify the size of the window
-    win.setGeometry(1200, 300, 500, 500)
-    win.setWindowTitle("UCI XCO Calender 2024")
-    win.setWindowIcon(QIcon("images/icon.jpeg"))
-    win.setToolTip("TurtleCode")
-    win.show()
-    sys.exit(app.exec())
+## Subclass QMainWindow to customize your application's main window
+class ButtonHolder(QMainWindow):
+    def __init__(self):
+        super().__init__
+        self.setWindowTitle("Button Holder App")
+        button = QPushButton("PressMe!")
+        ## Set our button as the central widget
+        self.setCentralWidget(button)
 
 
-window()
+
+
+app = QApplication(sys.argv)
+window = ButtonHolder()
+
+window.show()
+#Start the event loop
+app.exec()
