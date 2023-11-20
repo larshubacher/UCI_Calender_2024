@@ -1,5 +1,5 @@
 from PySide6.QtWidgets import QApplication
-from QPushButton import Widget
+from Qlabel_QlineEdit import Widget
 import sys
 
 app = QApplication(sys.argv)
