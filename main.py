@@ -1,10 +1,10 @@
 from PySide6.QtWidgets import QApplication
-from message_box import Message_box
+from QPushButton import Widget
 import sys
 
 app = QApplication(sys.argv)
 
-window = Message_box()
+window = Widget()
 window.show()
 
 app.exec()
