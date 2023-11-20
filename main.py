@@ -1,10 +1,10 @@
 from PySide6.QtWidgets import QApplication
-from rock_widget import RockWidget
+from main_window import MainWindow
 import sys
 
 app = QApplication(sys.argv)
 
-widget = RockWidget()
-widget.show()
+window = MainWindow(app)
+window.show()
 
 app.exec()
