@@ -38,7 +38,7 @@ class MainWindow(QMainWindow):
         self.addToolBar(toolbar)
 
         #Add the quit action to the toolbar
-        toolbar.addAction(quit_action)
+        toolbar.addAction(quit_action) ## quit_action from above
 
         action1 = QAction("Some Action", self)
         action1.setStatusTip("Status message for some action")
@@ -65,7 +65,8 @@ class MainWindow(QMainWindow):
 
     def button1_clicked(self):
         print("Clicked on the button")
-    def quit_app(self):
+
+    def quit_app(self): ## used in the function above (line 19)
         self.app.quit()
 
     def toolbar_button_click(self):
