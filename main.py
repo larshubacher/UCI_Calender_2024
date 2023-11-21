@@ -1,5 +1,5 @@
 from PySide6.QtWidgets import QApplication
-from QTextEdit import Widget
+from Qlabel_Images import Widget
 import sys
 
 app = QApplication(sys.argv)
