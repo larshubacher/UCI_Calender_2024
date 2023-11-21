@@ -1,5 +1,5 @@
 from PySide6.QtWidgets import QApplication
-from Qlabel_Images import Widget
+from SizePolicies_stretches import Widget
 import sys
 
 app = QApplication(sys.argv)
