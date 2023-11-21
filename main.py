@@ -1,10 +1,10 @@
 from PySide6.QtWidgets import QApplication
-from QCheckBox_QRadioButton import Widget
+from QList import Qlist
 import sys
 
 app = QApplication(sys.argv)
 
-window = Widget()
+window = Qlist()
 window.show()
 
 app.exec()
