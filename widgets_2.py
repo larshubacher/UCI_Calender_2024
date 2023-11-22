@@ -1,4 +1,4 @@
-from PySide6.QtWidgets import QWidget, QCalendarWidget, QGridLayout, QPushButton, QSizePolicy, QGroupBox, QDateEdit, QLabel, QFrame, QHBoxLayout, QVBoxLayout, QRadioButton, QButtonGroup
+from PySide6.QtWidgets import QWidget, QCalendarWidget, QGridLayout, QPushButton, QSizePolicy, QGroupBox, QDateEdit, QLabel, QFrame, QHBoxLayout, QVBoxLayout, QRadioButton, QButtonGroup, QApplication
 from PySide6.QtWebEngineWidgets import QWebEngineView
 from PySide6.QtCore import Qt
 import folium
@@ -24,7 +24,7 @@ class layout(QWidget):
         map_group_layout = QVBoxLayout(groupBox_map)
         # Read data from CSV file (latitude and longitude columns are assumed)
         df = pd.read_csv('data/uci_calender_2024.csv')
-        self.map_view = self.create_folium_map(df)
+        self.map_view = self.create_folium_map(df, [], [])  # Pass empty lists for initial display
         map_group_layout.addWidget(self.map_view)
 
         ## Timespan (from and to)
@@ -46,7 +46,7 @@ class layout(QWidget):
         group_layout_timespan.addLayout(date_layout2)
 
         ## Locations
-        groupBox_locations = QGroupBox("Race Categories", self)
+        groupBox_locations = QGroupBox("Locations", self)
         group_layout_locations = QVBoxLayout(groupBox_locations)
 
         # Race Category radio buttons
@@ -83,7 +83,6 @@ class layout(QWidget):
 
         groupBox_nations.setLayout(group_layout_nations)
 
-
         ## Race details
         groupBox_races = QGroupBox("Race details", self)
 
@@ -91,12 +90,13 @@ class layout(QWidget):
         grid_layout = QGridLayout()
         grid_layout.addWidget(groupBox_map, 0, 0, 2, 1)  # Take up 2 rows and 1 column
         grid_layout.addWidget(groupBox_timespan, 0, 1)
-        grid_layout.addWidget(nation_group, 0, 2)
-        grid_layout.addWidget(groupBox_races, 3, 0, 1, 3)
+        grid_layout.addWidget(groupBox_locations, 0, 2)
+        grid_layout.addWidget(groupBox_nations, 0, 3)
+        grid_layout.addWidget(groupBox_races, 3, 0, 1, 4)
 
         self.setLayout(grid_layout)
 
-    def create_folium_map(self, df):
+    def create_folium_map(self, df, selected_categories, selected_nations):
         # Create a Folium map centered around the first data point
         map_view = folium.Map(location=[df['latitude'].iloc[0], df['longitude'].iloc[0]], zoom_start=12)
 
@@ -104,9 +104,16 @@ class layout(QWidget):
         for index, row in df.iterrows():
             latitude = row['latitude']
             longitude = row['longitude']
+            category = row['Category']
+            nation = row['Counter_Code']
 
-            # Check for NaN values
-            if not np.isnan(latitude) and not np.isnan(longitude):
+            # Check for NaN values and if the category and nation are selected
+            if (
+                not np.isnan(latitude) 
+                and not np.isnan(longitude) 
+                and (not selected_categories or category in selected_categories)
+                and (not selected_nations or nation in selected_nations)
+            ):
                 folium.Marker([latitude, longitude], popup=row['Location']).add_to(map_view)
 
         # Save the map to an HTML file
@@ -119,24 +126,29 @@ class layout(QWidget):
         return web_view
 
     def on_race_category_button_clicked(self):
-        # Update the map based on the selected categories
+        # Update the map based on the selected categories and nations
         selected_categories = [button.text() for button in self.findChildren(QRadioButton) if button.isChecked()]
+        selected_nations = [button.text() for button in self.findChildren(QRadioButton) if button.isChecked()]
 
         # Read data from CSV file
         df = pd.read_csv('data/uci_calender_2024.csv')
 
-        # Filter DataFrame based on selected categories
-        selected_df = df[df['Category'].isin(selected_categories)]
-
         # Update the map
-        self.map_view.setHtml(self.create_folium_map(selected_df).page().toHtml())
+        self.map_view.setHtml(self.create_folium_map(df, selected_categories, selected_nations).page().toHtml())
 
     def on_nation_button_clicked(self):
         # Update the map based on the selected categories and nations
         selected_categories = [button.text() for button in self.findChildren(QRadioButton) if button.isChecked()]
         selected_nations = [button.text() for button in self.findChildren(QRadioButton) if button.isChecked()]
+
         # Read data from CSV file
         df = pd.read_csv('data/uci_calender_2024.csv')
+
         # Update the map
         self.map_view.setHtml(self.create_folium_map(df, selected_categories, selected_nations).page().toHtml())
 
+if __name__ == "__main__":
+    app = QApplication([])
+    window = layout()
+    window.show()
+    app.exec_()
