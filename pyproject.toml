@@ -19,6 +19,7 @@ pyside6 = "^6.6.0"
 flask = "^3.0.0"
 gunicorn = "^21.2.0"
 opencv-python-headless = "^4.8.1.78"
+folium = "^0.15.0"
 
 
 [tool.poetry.group.dev.dependencies]
