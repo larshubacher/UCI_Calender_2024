@@ -1,5 +1,5 @@
 from PySide6.QtWidgets import QMainWindow, QWidget, QVBoxLayout
-from widgets import time_filter_widget
+from widgets import time_filter_widget, layout
 
 class main_window(QMainWindow):
     def __init__(self):
@@ -11,7 +11,10 @@ class main_window(QMainWindow):
         containerLayout = QVBoxLayout()
         container.setLayout(containerLayout)
 
-        time_filter = time_filter_widget()
-        containerLayout.addWidget(time_filter)
+        layout_widget = layout()
+        containerLayout.addWidget(layout_widget)
+
+        #time_filter = time_filter_widget()
+        #containerLayout.addWidget(time_filter)
 
         self.setCentralWidget(container)
