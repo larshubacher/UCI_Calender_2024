@@ -7,7 +7,7 @@ Date,Event_Link,Event_Name,Counter_Code,Location,Category,latitute,longitude
 08 Feb-11 Feb,https://mtbdata.com/comp/momentum-medical-scheme-tankwa-trek-presented-by-biogen-xcms-08-feb-11-feb-2024-ceres,Momentum Medical Scheme Tankwa Trek presented by Biogen - XCMS,RSA,Ceres,S1,45.3133772,7.3896883
 10 Feb-10 Feb,https://mtbdata.com/comp/israel-spring-round-mishmar-haemek-2-10-feb-2024-mishmar-haemek,Israel Spring Round - Mishmar Haemek-2,ISR,Mishmar Haemek,C2,32.6105821,35.1421972
 11 Feb-11 Feb,https://mtbdata.com/comp/shimano-supercup-massi-la-nucia-11-feb-2024-la-nucia,Shimano Supercup Massi La Nucía,ESP,La Nucía,C1,38.6133727,-0.1257319
-16 Feb-16 Feb,https://mtbdata.com/comp/israel-spring-round-3-lahav-forest-1-16-feb-2024-lahav-forest,Israel Spring Round-3 - Lahav Forest-1,ISR,Lahav Forest,C2,31.366788800000002,34.838522471143925
+16 Feb-16 Feb,https://mtbdata.com/comp/israel-spring-round-3-lahav-forest-1-16-feb-2024-lahav-forest,Israel Spring Round-3 - Lahav Forest-1,ISR,Lahav Forest,C2,31.3667888,34.838522471143925
 17 Feb-18 Feb,https://mtbdata.com/comp/internacionales-chelva-gsport-challenge-uci-xco-junior-series-17-feb-18-feb-2024-chelva,Internacionales Chelva Gsport Challenge + UCI XCO Junior Series,ESP,Chelva,HC,39.7486658,-0.9976861
 21 Feb-21 Feb,https://mtbdata.com/comp/tropical-mtb-challenge-2-21-feb-2024-albergue-olimpico-de-salinas,Tropical MTB Challenge - 2,PUR,Albergue Olímpico de Salinas,C1,18.0181317,-66.2370699
 24 Feb-25 Feb,https://mtbdata.com/comp/new-zealand-national-championships-xco-xcc-dhi-24-feb-25-feb-2024-queenstown,New Zealand National Championships - XCO - XCC - DHI,NZL,Queenstown,CN,-45.0321923,168.661
@@ -52,10 +52,10 @@ Date,Event_Link,Event_Name,Counter_Code,Location,Category,latitute,longitude
 27 Apr-28 Apr,https://mtbdata.com/comp/soon-terrengsykkelfestival-27-apr-28-apr-2024-son,Soon Terrengsykkelfestival,NOR,Son,C1,49.58132,4.27575
 28 Apr-28 Apr,https://mtbdata.com/comp/mtb-croatia-cup-vodice-28-apr-2024-vodice,MTB Croatia Cup - Vodice,CRO,Vodice,C1,43.7602196,15.7788084
 28 Apr-28 Apr,https://mtbdata.com/comp/dhi-pozo-do-demo-28-apr-2024-verin,DHI Pozo Do Demo,ESP,Verin,C2,45.4536,4.75322
-02 May-05 May,https://mtbdata.com/comp/french-national-championships-xco-xce-xcc-02-may-05-may-2024,French National Championships - XCO - XCE - XCC,FRA,,CN,46.3144754,11.0480288
+02 May-05 May,https://mtbdata.com/comp/french-national-championships-xco-xce-xcc-02-may-05-may-2024,French National Championships - XCO - XCE - XCC,FRA,Ort unbekannt,CN,46.3144754,11.0480288
 03 May-03 May,https://mtbdata.com/comp/israel-cup-4-shfaram-03-may-2024-shfaram,Israel Cup 4 Shfaram,ISR,Shfaram,C2,32.8045765,35.1723866
-03 May-04 May,https://mtbdata.com/comp/capoliveri-legend-xco-2024-03-may-04-may-2024-capoliveri-elba-island,Capoliveri Legend XCO 2024,ITA,Capoliveri Elba Island,C1,42.790216599999994,10.340278678735025
-04 May-04 May,https://mtbdata.com/comp/maja-wloszczowska-mtb-race-04-may-2024-jelenia-gora,Maja Włoszczowska MTB Race,POL,Jelenia Góra,C1,50.8501049,15.653749235408073
+03 May-04 May,https://mtbdata.com/comp/capoliveri-legend-xco-2024-03-may-04-may-2024-capoliveri-elba-island,Capoliveri Legend XCO 2024,ITA,Capoliveri Elba Island,C1,42.7902166,10.340278678735023
+04 May-04 May,https://mtbdata.com/comp/maja-wloszczowska-mtb-race-04-may-2024-jelenia-gora,Maja Włoszczowska MTB Race,POL,Jelenia Góra,C1,50.8501049,15.653749235408071
 05 May-05 May,https://mtbdata.com/comp/mtb-weekend-eupen-05-may-2024-eupen,MTB Weekend Eupen,BEL,Eupen,C2,50.6305665,6.0312717
 05 May-05 May,https://mtbdata.com/comp/shimano-supercup-massi-sabinanigo-05-may-2024-girona,Shimano Supercup Massi Sabiñánigo,ESP,Girona,C1,41.9793006,2.8199439
 05 May-05 May,https://mtbdata.com/comp/rye-bike-festival-rye-terrengsykkelfestival-xco-05-may-2024-oslo,Rye bike festival / Rye terrengsykkelfestival - XCO,NOR,Oslo,C1,59.9133301,10.7389701
@@ -96,7 +96,7 @@ Date,Event_Link,Event_Name,Counter_Code,Location,Category,latitute,longitude
 09 Jun-09 Jun,https://mtbdata.com/comp/gran-premio-zaragoza-xco-09-jun-2024-zaragoza,Gran Premio Zaragoza XCO,ESP,Zaragoza,C1,41.6521342,-0.8809428
 12 Jun-12 Jun,https://mtbdata.com/comp/canmore-canada-cup-xco-12-jun-2024-canmore-alberta,Canmore Canada Cup XCO,CAN,"Canmore, Alberta",C1,51.0866897,-115.3481135
 14 Jun-16 Jun,https://mtbdata.com/comp/uci-mountain-bike-world-cup-xcoxccdhi-14-jun-16-jun-2024,UCI Mountain Bike World Cup XCO/XCC/DHI,ITA,Val Di Sole,CDM,46.3174381,10.8266479
-15 Jun-15 Jun,https://mtbdata.com/comp/french-national-championships-xcm-15-jun-2024,French National Championships - XCM,FRA,,CN,46.3144754,11.0480288
+15 Jun-15 Jun,https://mtbdata.com/comp/french-national-championships-xcm-15-jun-2024,French National Championships - XCM,FRA,Ort unbekannt,CN,46.3144754,11.0480288
 16 Jun-16 Jun,https://mtbdata.com/comp/shark-attack-bike-festival-16-jun-2024-lennestadt-saalhausen,Shark Attack Bike-Festival,GER,Lennestadt - Saalhausen,C2,51.1173377,8.1655905
 16 Jun-16 Jun,https://mtbdata.com/comp/green-series-xco-barakaldo-2024-16-jun-2024-barakaldo-bizkaia,Green Series XCO Barakaldo 2024,ESP,Barakaldo (Bizkaia),C2,43.29548,-2.9900933
 16 Jan-17 Jan,https://mtbdata.com/comp/2024-thailand-moutain-bike-cup-16-jan-17-jan-2024-kanchanaburi-thailand,2024 Thailand Moutain Bike Cup,THA,"Kanchanaburi, Thailand",C1,14.44019,99.2676727
@@ -107,7 +107,7 @@ Date,Event_Link,Event_Name,Counter_Code,Location,Category,latitute,longitude
 09 Feb-09 Feb,https://mtbdata.com/comp/israel-spring-round-mishmar-haemek-09-feb-2024-mishmar-haemek,Israel Spring Round - Mishmar Haemek,ISR,Mishmar Haemek,C2,32.6105821,35.1421972
 10 Feb-11 Feb,https://mtbdata.com/comp/uci-snow-bike-world-championships-10-feb-11-feb-2024-chatel,UCI SNOW BIKE WORLD CHAMPIONSHIPS,FRA,Châtel,CM,46.2671987,6.8412678
 15 Feb-18 Feb,https://mtbdata.com/comp/iii-la-leyenda-de-tartessos-xcms-15-feb-18-feb-2024-el-rompido-cartaya-huelva,III LA Leyenda de Tartessos - XCMS,ESP,"El Rompido (Cartaya, Huelva)",S2,37.217652,-7.1247176
-17 Feb-17 Feb,https://mtbdata.com/comp/israel-spring-round-4-lahav-forest-2-17-feb-2024-lahav-forest,Israel Spring Round-4 - Lahav Forest-2,ISR,Lahav Forest,C2,31.366788800000002,34.838522471143925
+17 Feb-17 Feb,https://mtbdata.com/comp/israel-spring-round-4-lahav-forest-2-17-feb-2024-lahav-forest,Israel Spring Round-4 - Lahav Forest-2,ISR,Lahav Forest,C2,31.3667888,34.838522471143925
 17 Feb-18 Feb,https://mtbdata.com/comp/costa-rican-open-of-downhill-17-feb-18-feb-2024-pista-el-cabuyal-cartago,Costa Rican Open Of Downhill,CRC,"Pista El Cabuyal, Cartago",C2,,
 23 Feb-25 Feb,https://mtbdata.com/comp/tropical-mountain-bike-challenge-23-feb-25-feb-2024-albergue-olimpico-de-salinas-puerto-rico,Tropical Mountain Bike Challenge,PUR,"Albergue Olímpico de Salinas, Puerto Rico",HC,18.0181317,-66.2370699
 24 Feb-25 Feb,https://mtbdata.com/comp/shimano-supercup-massi-banyoles-uci-xco-junior-series-24-feb-25-feb-2024-banyoles,Shimano Supercup Massi Banyoles + UCI XCO Junior Series,ESP,Banyoles,HC,42.1180477,2.7653607
@@ -161,7 +161,7 @@ Date,Event_Link,Event_Name,Counter_Code,Location,Category,latitute,longitude
 05 May-05 May,https://mtbdata.com/comp/okk-bike-revolution-2-uci-xco-junior-series-05-may-2024-chur,Ökk Bike Revolution #2 + UCI XCO Junior Series,SUI,Chur,HC,46.854747,9.5264904
 08 May-12 May,https://mtbdata.com/comp/uec-mountainbike-european-continental-championships-xcoxccxcrxce-08-may-12-may-2024-cheile-gradistei,UEC Mountainbike European Continental Championships - XCO/XCC/XCR/XCE,ROU,Cheile Gradistei,CC,45.4637481,25.3048158
 10 May-12 May,https://mtbdata.com/comp/asian-continental-championships-xco-dhi-xcr-xce-10-may-12-may-2024-putrajaya,Asian Continental Championships - XCO - DHI - XCR - XCE,MAS,Putrajaya,CC,2.9140567,101.6838531
-11 May-12 May,https://mtbdata.com/comp/mtb-french-cup-powered-by-skf-dhi-11-may-12-may-2024,MTB French Cup Powered By SKF - DHI,FRA,,C1,46.3144754,11.0480288
+11 May-12 May,https://mtbdata.com/comp/mtb-french-cup-powered-by-skf-dhi-11-may-12-may-2024,MTB French Cup Powered By SKF - DHI,FRA,Ort unbekannt,C1,46.3144754,11.0480288
 16 May-19 May,https://mtbdata.com/comp/uci-mountain-bike-masters-world-championships-16-may-19-may-2024-cairns,UCI MOUNTAIN BIKE MASTERS WORLD CHAMPIONSHIPS,AUS,Cairns,CMM,-16.9206657,145.7721854
 17 May-19 May,https://mtbdata.com/comp/uci-mountain-bike-world-cup-dhiedre-edr-17-may-19-may-2024,UCI Mountain Bike World Cup DHI/EDR/E-EDR,POL,Bielsko Biala,CDM,49.81207845,19.029198802013944
 17 May-18 May,https://mtbdata.com/comp/englewood-open-uci-xco-junior-series-17-may-18-may-2024-fall-river-wi,Englewood Open + UCI XCO Junior Series,USA,Fall River WI,C1,43.3844338,-89.0451108
@@ -176,7 +176,7 @@ Date,Event_Link,Event_Name,Counter_Code,Location,Category,latitute,longitude
 25 May-25 May,https://mtbdata.com/comp/nove-mesto-na-morave-uci-xco-junior-series-25-may-2024-nove-mesto-na-morave-czechia,Nové Město na Moravě - UCI XCO Junior Series,CZE,"Nové Město na Moravě, Czechia",HC,49.5616916,16.0744185
 25 May-26 May,https://mtbdata.com/comp/coupe-de-japon-mtb-yawatahama-international-mtb-race2024asian-series-uci-xco-junior-series-25-may-26-may-2024-yawatahama-cityehime,Coupe de Japon MTB Yawatahama International MTB Race2024+Asian Series + UCI XCO Junior Series,JPN,"Yawatahama City,Ehime",C1,33.46848,132.4245731
 26 May-26 May,https://mtbdata.com/comp/copa-catalana-internacional-btt-biking-point-vic-26-may-2024-vic,Copa Catalana Internacional BTT Biking Point Vic,ESP,Vic,C3,41.9302021,2.2545943
-31 May-01 Jun,https://mtbdata.com/comp/french-national-championships-edr-31-may-01-jun-2024,French National Championships - EDR,FRA,,CN,46.3144754,11.0480288
+31 May-01 Jun,https://mtbdata.com/comp/french-national-championships-edr-31-may-01-jun-2024,French National Championships - EDR,FRA,Ort unbekannt,CN,46.3144754,11.0480288
 01 Jun-02 Jun,https://mtbdata.com/comp/salvadoran-national-championships-dhi-01-jun-02-jun-2024-la-libertad,Salvadoran National Championships - DHI,ESA,La Libertad,CN,-8.0,-78.5
 01 Jun-02 Jun,https://mtbdata.com/comp/lugnet-xco-01-jun-02-jun-2024-falun,Lugnet XCO,SWE,Falun,C2,60.6070068,15.6323059
 02 Jun-02 Jun,https://mtbdata.com/comp/reto-hacienda-sabanera-02-jun-2024-cidra-puerto-rico,Reto Hacienda Sabanera,PUR,"Cidra, Puerto Rico",C1,18.1757164,-66.1609235
@@ -201,7 +201,7 @@ Date,Event_Link,Event_Name,Counter_Code,Location,Category,latitute,longitude
 20 Jun-23 Jun,https://mtbdata.com/comp/alpentour-trophy-xcms-20-jun-23-jun-2024-schladming,Alpentour Trophy - XCMS,AUT,Schladming,S1,47.3940415,13.6867878
 21 Jun-23 Jun,https://mtbdata.com/comp/uci-mountain-bike-world-cup-xcoxcc-21-jun-23-jun-2024,UCI Mountain Bike World Cup XCO/XCC,SUI,Crans Montana,CDM,46.3304899,7.526435803722132
 21 Jun-23 Jun,https://mtbdata.com/comp/2-cimtb-21-jun-23-jun-2024-nova-lima-mg,#2 CIMTB,BRA,Nova Lima MG,C1,-19.9854089,-43.8470691
-27 Jun-30 Jun,https://mtbdata.com/comp/uci-mountain-bike-world-cup-edre-edr-28-jun-30-jun-2024,UCI Mountain Bike World Cup EDR/E-EDR,FRA,Haute-Savoie,CDM,46.068820849999994,6.344536991587102
+27 Jun-30 Jun,https://mtbdata.com/comp/uci-mountain-bike-world-cup-edre-edr-28-jun-30-jun-2024,UCI Mountain Bike World Cup EDR/E-EDR,FRA,Haute-Savoie,CDM,46.06882085,6.344536991587102
 29 Jun-29 Jun,https://mtbdata.com/comp/alpago-bike-funtastic-internazionali-ditalia-series-uci-xco-junior-series-29-jun-2024-lamosano-di-chies-dalpago,Alpago Bike Funtastic - Internazionali D'italia Series + UCI XCO Junior Series,ITA,Lamosano Di Chies D'alpago,C1,46.18225205,12.39922900031237
 30 Jun-30 Jun,https://mtbdata.com/comp/okk-bike-revolution-4-30-jun-2024-davos,Ökk Bike Revolution #4,SUI,Davos,HC,46.796198,9.8236892
 30 Jun-30 Jun,https://mtbdata.com/comp/gran-premio-ciudad-del-ciclismo-btt-xco-30-jun-2024-cervera-del-maestrat,Gran Premio Ciudad del Ciclismo BTT XCO,ESP,Cervera Del Maestrat,C2,40.4546024,0.2764541
@@ -224,13 +224,13 @@ Date,Event_Link,Event_Name,Counter_Code,Location,Category,latitute,longitude
 21 Jul-21 Jul,https://mtbdata.com/comp/xcm-herzegovina-xcm-21-jul-2024-nature-park-blidinje,XCM Herzegovina - XCM,BIH,Nature park Blidinje,C1,43.6316528,17.541408402393195
 27 Jul-28 Jul,https://mtbdata.com/comp/japanese-national-championships-dhi-27-jul-28-jul-2024-gifu-prefecture,Japanese National Championships - DHI,JPN,Gifu Prefecture,CN,35.7867449,137.0460777
 28 Jul-29 Jul,https://mtbdata.com/comp/jeux-olympiques-olympic-games-28-jul-29-jul-2024-paris,Jeux Olympiques / Olympic Games,FRA,Paris,JO,48.8534951,2.3483915
-03 Aug-04 Aug,https://mtbdata.com/comp/silver-star-canada-cup-dh-03-aug-04-aug-2024-silver-star-british-columbia,Silver Star Canada Cup DH,CAN,"Silver Star, British Columbia",C1,50.3762642,-119.08664134365999
+03 Aug-04 Aug,https://mtbdata.com/comp/silver-star-canada-cup-dh-03-aug-04-aug-2024-silver-star-british-columbia,Silver Star Canada Cup DH,CAN,"Silver Star, British Columbia",C1,50.3762642,-119.08664134366
 04 Aug-04 Aug,https://mtbdata.com/comp/paraguayan-national-championships-xcm-e-xcm-04-aug-2024-tras-ybytyrusu,Paraguayan National Championships - XCM - E-XCM,PAR,Tras Ybytyrusu,CN,,
 10 Aug-10 Aug,https://mtbdata.com/comp/gorale-na-start-10-aug-2024-boguszow-gorce,Górale na Start,POL,Boguszów-Gorce,C2,50.7566795,16.2043895
 10 Aug-11 Aug,https://mtbdata.com/comp/canadian-national-championships-dhi-10-aug-11-aug-2024-sun-peaks-british-columbia,Canadian National Championships - DHI,CAN,"Sun Peaks, British Columbia",CN,50.8844684,-119.8823295
 16 Aug-18 Aug,https://mtbdata.com/comp/3-cimtb-16-aug-18-aug-2024-pocos-de-caldas-mg,#3 CIMTB,BRA,Poços de Caldas MG,C1,-21.7900318,-46.5647928
 18 Aug-18 Aug,https://mtbdata.com/comp/3-desafio-dos-gigantes-shimano-fest-18-aug-2024-sao-paulo-sp,#3 Desafio dos Gigantes Shimano Fest,BRA,São Paulo SP,C3,-23.5506507,-46.6333824
-22 Aug-24 Aug,https://mtbdata.com/comp/french-national-championships-dhi-22-aug-24-aug-2024,French National Championships - DHI,FRA,,CN,46.3144754,11.0480288
+22 Aug-24 Aug,https://mtbdata.com/comp/french-national-championships-dhi-22-aug-24-aug-2024,French National Championships - DHI,FRA,Ort unbekannt,CN,46.3144754,11.0480288
 24 Aug-24 Aug,https://mtbdata.com/comp/grand-raid-bcvs-mtb-alpine-cup-xcm-24-aug-2024-verbier-grimentz,Grand Raid BCVS - MTB Alpine Cup - XCM,SUI,"Verbier, Grimentz",HC,,
 24 Aug-24 Aug,https://mtbdata.com/comp/st-felicien-canada-cup-xcc-24-aug-2024-st-felicien-quebec,St. Félicien Canada Cup XCC,CAN,"St. Félicien, Quebec",C3,48.654232,-72.448654
 24 Aug-25 Aug,https://mtbdata.com/comp/copa-paraguay-k6-naranjal-mountain-bike-24-aug-25-aug-2024-naranjalalto-parana,Copa Paraguay K6 Naranjal Mountain Bike,PAR,Naranjal/Alto Parana,C2,-25.9739991,-55.1901109
@@ -241,9 +241,9 @@ Date,Event_Link,Event_Name,Counter_Code,Location,Category,latitute,longitude
 07 Sep-08 Sep,https://mtbdata.com/comp/sande-mtb-weekend-07-sep-08-sep-2024-sande-i-vestfold,Sande MTB Weekend,NOR,Sande i Vestfold,C1,59.5872896,10.2075012
 08 Sep-08 Sep,https://mtbdata.com/comp/mythos-primiero-dolomiti-xcm-08-sep-2024-primiero-san-martino-di-castrozza,Mythos Primiero Dolomiti - XCM,ITA,Primiero San Martino di Castrozza,C2,46.243723,11.8360278
 14 Sep-14 Sep,https://mtbdata.com/comp/prima-cup-harrachov-xcm-14-sep-2024-harrachov,Prima CUP - Harrachov - XCM,CZE,Harrachov,C2,50.7720087,15.4315431
-14 Sep-15 Sep,https://mtbdata.com/comp/karl-xii-rittet-14-sep-15-sep-2024-halden,Karl XII Rittet,NOR,Halden,C1,59.0680555,11.537191002239753
+14 Sep-15 Sep,https://mtbdata.com/comp/karl-xii-rittet-14-sep-15-sep-2024-halden,Karl XII Rittet,NOR,Halden,C1,59.0680555,11.537191002239751
 15 Sep-15 Sep,https://mtbdata.com/comp/okk-bike-revolution-6-15-sep-2024-huttwil,Ökk Bike Revolution #6,SUI,Huttwil,HC,47.1147419,7.8455436
-15 Sep-15 Sep,https://mtbdata.com/comp/mtb-french-cup-powered-by-skf-dhi-15-sep-2024,MTB French Cup Powered By SKF - DHI,FRA,,C1,46.3144754,11.0480288
+15 Sep-15 Sep,https://mtbdata.com/comp/mtb-french-cup-powered-by-skf-dhi-15-sep-2024,MTB French Cup Powered By SKF - DHI,FRA,Ort unbekannt,C1,46.3144754,11.0480288
 16 Sep-17 Sep,https://mtbdata.com/comp/taca-brasil-de-xco-rj-16-sep-17-sep-2024-petropolis,Taça Brasil de XCO-RJ,BRA,Petrópolis,C2,-22.5075743,-43.1785356
 21 Sep-21 Sep,https://mtbdata.com/comp/shimano-supercup-massi-girona-21-sep-2024-girona,Shimano Supercup Massi Girona,ESP,Girona,C2,41.9793006,2.8199439
 21 Sep-21 Sep,https://mtbdata.com/comp/nockstein-trophy-21-sep-2024-koppl,Nockstein Trophy,AUT,Koppl,C2,47.8078354,13.1554315
@@ -251,7 +251,7 @@ Date,Event_Link,Event_Name,Counter_Code,Location,Category,latitute,longitude
 27 Sep-29 Sep,https://mtbdata.com/comp/uci-mountain-bike-world-cup-xcoxcc-27-sep-29-sep-2024,UCI Mountain Bike World Cup XCO/XCC,USA,Lake Placid,CDM,44.279621,-73.979874
 29 Sep-29 Sep,https://mtbdata.com/comp/cyprus-national-championships-xce-29-sep-2024-pera-orinis,Cyprus National Championships - XCE,CYP,Pera Orinis,CN,35.031929,33.2535955
 02 Oct-05 Oct,https://mtbdata.com/comp/momentum-medical-scheme-cape-pioneer-trek-presented-by-biogen-xcms-02-oct-05-oct-2024-oudtshoorn,Momentum Medical Scheme Cape Pioneer Trek presented by Biogen - XCMS,RSA,Oudtshoorn,S1,-33.5902954,22.204206
-04 Oct-06 Oct,https://mtbdata.com/comp/ixs-downhill-cup-04-oct-06-oct-2024,iXS Downhill Cup,SUI,,C2,46.3144754,11.0480288
+04 Oct-06 Oct,https://mtbdata.com/comp/ixs-downhill-cup-04-oct-06-oct-2024,iXS Downhill Cup,SUI,Ort unbekannt,C2,46.3144754,11.0480288
 05 Oct-06 Oct,https://mtbdata.com/comp/italian-national-championships-edr-05-oct-06-oct-2024-campo-nellelba-isola-delba,Italian National Championships - EDR,ITA,Campo Nell'elba - Isola D'elba,CN,42.7506599,10.2354955
 06 Oct-06 Oct,https://mtbdata.com/comp/mtb-eliminator-gibraltar-06-oct-2024-gibraltar,MTB Eliminator Gibraltar,GBR,Gibraltar,C3,36.1285933,-5.3474761
 08 Oct-08 Oct,https://mtbdata.com/comp/brasilian-national-championships-xcm-08-oct-2024-campo-de-brito-se,Brasilian National Championships - XCM,BRA,Campo de Brito SE,CN,-10.78127255,-37.49142579393478
@@ -263,7 +263,7 @@ Date,Event_Link,Event_Name,Counter_Code,Location,Category,latitute,longitude
 08 Dec-08 Dec,https://mtbdata.com/comp/hong-kong-national-championships-dhi-08-dec-2024-hong-kong,Hong Kong National Championships - DHI,HKG,Hong Kong,CN,22.350627,114.1849161
 21 Jun-23 Jun,https://mtbdata.com/comp/uci-mountain-bike-world-cup-xcoxcc-21-jun-23-jun-2024,UCI Mountain Bike World Cup XCO/XCC,SUI,Crans Montana,CDM,46.3304899,7.526435803722132
 21 Jun-23 Jun,https://mtbdata.com/comp/2-cimtb-21-jun-23-jun-2024-nova-lima-mg,#2 CIMTB,BRA,Nova Lima MG,C1,-19.9854089,-43.8470691
-27 Jun-30 Jun,https://mtbdata.com/comp/uci-mountain-bike-world-cup-edre-edr-28-jun-30-jun-2024,UCI Mountain Bike World Cup EDR/E-EDR,FRA,Haute-Savoie,CDM,46.068820849999994,6.344536991587102
+27 Jun-30 Jun,https://mtbdata.com/comp/uci-mountain-bike-world-cup-edre-edr-28-jun-30-jun-2024,UCI Mountain Bike World Cup EDR/E-EDR,FRA,Haute-Savoie,CDM,46.06882085,6.344536991587102
 29 Jun-29 Jun,https://mtbdata.com/comp/alpago-bike-funtastic-internazionali-ditalia-series-uci-xco-junior-series-29-jun-2024-lamosano-di-chies-dalpago,Alpago Bike Funtastic - Internazionali D'italia Series + UCI XCO Junior Series,ITA,Lamosano Di Chies D'alpago,C1,46.18225205,12.39922900031237
 30 Jun-30 Jun,https://mtbdata.com/comp/okk-bike-revolution-4-30-jun-2024-davos,Ökk Bike Revolution #4,SUI,Davos,HC,46.796198,9.8236892
 30 Jun-30 Jun,https://mtbdata.com/comp/gran-premio-ciudad-del-ciclismo-btt-xco-30-jun-2024-cervera-del-maestrat,Gran Premio Ciudad del Ciclismo BTT XCO,ESP,Cervera Del Maestrat,C2,40.4546024,0.2764541
@@ -286,13 +286,13 @@ Date,Event_Link,Event_Name,Counter_Code,Location,Category,latitute,longitude
 21 Jul-21 Jul,https://mtbdata.com/comp/xcm-herzegovina-xcm-21-jul-2024-nature-park-blidinje,XCM Herzegovina - XCM,BIH,Nature park Blidinje,C1,43.6316528,17.541408402393195
 27 Jul-28 Jul,https://mtbdata.com/comp/japanese-national-championships-dhi-27-jul-28-jul-2024-gifu-prefecture,Japanese National Championships - DHI,JPN,Gifu Prefecture,CN,35.7867449,137.0460777
 28 Jul-29 Jul,https://mtbdata.com/comp/jeux-olympiques-olympic-games-28-jul-29-jul-2024-paris,Jeux Olympiques / Olympic Games,FRA,Paris,JO,48.8534951,2.3483915
-03 Aug-04 Aug,https://mtbdata.com/comp/silver-star-canada-cup-dh-03-aug-04-aug-2024-silver-star-british-columbia,Silver Star Canada Cup DH,CAN,"Silver Star, British Columbia",C1,50.3762642,-119.08664134365999
+03 Aug-04 Aug,https://mtbdata.com/comp/silver-star-canada-cup-dh-03-aug-04-aug-2024-silver-star-british-columbia,Silver Star Canada Cup DH,CAN,"Silver Star, British Columbia",C1,50.3762642,-119.08664134366
 04 Aug-04 Aug,https://mtbdata.com/comp/paraguayan-national-championships-xcm-e-xcm-04-aug-2024-tras-ybytyrusu,Paraguayan National Championships - XCM - E-XCM,PAR,Tras Ybytyrusu,CN,,
 10 Aug-10 Aug,https://mtbdata.com/comp/gorale-na-start-10-aug-2024-boguszow-gorce,Górale na Start,POL,Boguszów-Gorce,C2,50.7566795,16.2043895
 10 Aug-11 Aug,https://mtbdata.com/comp/canadian-national-championships-dhi-10-aug-11-aug-2024-sun-peaks-british-columbia,Canadian National Championships - DHI,CAN,"Sun Peaks, British Columbia",CN,50.8844684,-119.8823295
 16 Aug-18 Aug,https://mtbdata.com/comp/3-cimtb-16-aug-18-aug-2024-pocos-de-caldas-mg,#3 CIMTB,BRA,Poços de Caldas MG,C1,-21.7900318,-46.5647928
 18 Aug-18 Aug,https://mtbdata.com/comp/3-desafio-dos-gigantes-shimano-fest-18-aug-2024-sao-paulo-sp,#3 Desafio dos Gigantes Shimano Fest,BRA,São Paulo SP,C3,-23.5506507,-46.6333824
-22 Aug-24 Aug,https://mtbdata.com/comp/french-national-championships-dhi-22-aug-24-aug-2024,French National Championships - DHI,FRA,,CN,46.3144754,11.0480288
+22 Aug-24 Aug,https://mtbdata.com/comp/french-national-championships-dhi-22-aug-24-aug-2024,French National Championships - DHI,FRA,Ort unbekannt,CN,46.3144754,11.0480288
 24 Aug-24 Aug,https://mtbdata.com/comp/grand-raid-bcvs-mtb-alpine-cup-xcm-24-aug-2024-verbier-grimentz,Grand Raid BCVS - MTB Alpine Cup - XCM,SUI,"Verbier, Grimentz",HC,,
 24 Aug-24 Aug,https://mtbdata.com/comp/st-felicien-canada-cup-xcc-24-aug-2024-st-felicien-quebec,St. Félicien Canada Cup XCC,CAN,"St. Félicien, Quebec",C3,48.654232,-72.448654
 24 Aug-25 Aug,https://mtbdata.com/comp/copa-paraguay-k6-naranjal-mountain-bike-24-aug-25-aug-2024-naranjalalto-parana,Copa Paraguay K6 Naranjal Mountain Bike,PAR,Naranjal/Alto Parana,C2,-25.9739991,-55.1901109
@@ -303,9 +303,9 @@ Date,Event_Link,Event_Name,Counter_Code,Location,Category,latitute,longitude
 07 Sep-08 Sep,https://mtbdata.com/comp/sande-mtb-weekend-07-sep-08-sep-2024-sande-i-vestfold,Sande MTB Weekend,NOR,Sande i Vestfold,C1,59.5872896,10.2075012
 08 Sep-08 Sep,https://mtbdata.com/comp/mythos-primiero-dolomiti-xcm-08-sep-2024-primiero-san-martino-di-castrozza,Mythos Primiero Dolomiti - XCM,ITA,Primiero San Martino di Castrozza,C2,46.243723,11.8360278
 14 Sep-14 Sep,https://mtbdata.com/comp/prima-cup-harrachov-xcm-14-sep-2024-harrachov,Prima CUP - Harrachov - XCM,CZE,Harrachov,C2,50.7720087,15.4315431
-14 Sep-15 Sep,https://mtbdata.com/comp/karl-xii-rittet-14-sep-15-sep-2024-halden,Karl XII Rittet,NOR,Halden,C1,59.0680555,11.537191002239753
+14 Sep-15 Sep,https://mtbdata.com/comp/karl-xii-rittet-14-sep-15-sep-2024-halden,Karl XII Rittet,NOR,Halden,C1,59.0680555,11.537191002239751
 15 Sep-15 Sep,https://mtbdata.com/comp/okk-bike-revolution-6-15-sep-2024-huttwil,Ökk Bike Revolution #6,SUI,Huttwil,HC,47.1147419,7.8455436
-15 Sep-15 Sep,https://mtbdata.com/comp/mtb-french-cup-powered-by-skf-dhi-15-sep-2024,MTB French Cup Powered By SKF - DHI,FRA,,C1,46.3144754,11.0480288
+15 Sep-15 Sep,https://mtbdata.com/comp/mtb-french-cup-powered-by-skf-dhi-15-sep-2024,MTB French Cup Powered By SKF - DHI,FRA,Ort unbekannt,C1,46.3144754,11.0480288
 16 Sep-17 Sep,https://mtbdata.com/comp/taca-brasil-de-xco-rj-16-sep-17-sep-2024-petropolis,Taça Brasil de XCO-RJ,BRA,Petrópolis,C2,-22.5075743,-43.1785356
 21 Sep-21 Sep,https://mtbdata.com/comp/shimano-supercup-massi-girona-21-sep-2024-girona,Shimano Supercup Massi Girona,ESP,Girona,C2,41.9793006,2.8199439
 21 Sep-21 Sep,https://mtbdata.com/comp/nockstein-trophy-21-sep-2024-koppl,Nockstein Trophy,AUT,Koppl,C2,47.8078354,13.1554315
@@ -313,7 +313,7 @@ Date,Event_Link,Event_Name,Counter_Code,Location,Category,latitute,longitude
 27 Sep-29 Sep,https://mtbdata.com/comp/uci-mountain-bike-world-cup-xcoxcc-27-sep-29-sep-2024,UCI Mountain Bike World Cup XCO/XCC,USA,Lake Placid,CDM,44.279621,-73.979874
 29 Sep-29 Sep,https://mtbdata.com/comp/cyprus-national-championships-xce-29-sep-2024-pera-orinis,Cyprus National Championships - XCE,CYP,Pera Orinis,CN,35.031929,33.2535955
 02 Oct-05 Oct,https://mtbdata.com/comp/momentum-medical-scheme-cape-pioneer-trek-presented-by-biogen-xcms-02-oct-05-oct-2024-oudtshoorn,Momentum Medical Scheme Cape Pioneer Trek presented by Biogen - XCMS,RSA,Oudtshoorn,S1,-33.5902954,22.204206
-04 Oct-06 Oct,https://mtbdata.com/comp/ixs-downhill-cup-04-oct-06-oct-2024,iXS Downhill Cup,SUI,,C2,46.3144754,11.0480288
+04 Oct-06 Oct,https://mtbdata.com/comp/ixs-downhill-cup-04-oct-06-oct-2024,iXS Downhill Cup,SUI,Ort unbekannt,C2,46.3144754,11.0480288
 05 Oct-06 Oct,https://mtbdata.com/comp/italian-national-championships-edr-05-oct-06-oct-2024-campo-nellelba-isola-delba,Italian National Championships - EDR,ITA,Campo Nell'elba - Isola D'elba,CN,42.7506599,10.2354955
 06 Oct-06 Oct,https://mtbdata.com/comp/mtb-eliminator-gibraltar-06-oct-2024-gibraltar,MTB Eliminator Gibraltar,GBR,Gibraltar,C3,36.1285933,-5.3474761
 08 Oct-08 Oct,https://mtbdata.com/comp/brasilian-national-championships-xcm-08-oct-2024-campo-de-brito-se,Brasilian National Championships - XCM,BRA,Campo de Brito SE,CN,-10.78127255,-37.49142579393478
