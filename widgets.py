@@ -37,6 +37,7 @@ class layout(QWidget):
         ## Timespan (from and to)
         groupBox_timespan = QGroupBox("Timespan", self)
         group_layout = QHBoxLayout(groupBox_timespan)
+
         date_layout1 = QHBoxLayout()
         label_from = QLabel("From:", self)
         self.date_edit1 = QDateEdit(self)
@@ -51,26 +52,29 @@ class layout(QWidget):
 
         group_layout.addLayout(date_layout1)
         group_layout.addLayout(date_layout2)
-
         groupBox_locations = QGroupBox("Locations")
         ## list of countriess
         countries = [x for x in self.df["Counter_Code"]]
         countries = set(countries)
 
         location_layout = QVBoxLayout(groupBox_locations)
+        self.location_checkboxes = [] ## store checkboxes
         for country in countries:
             checkbox = QCheckBox(country,self)
+            checkbox.toggled.connect(self.update_table)
             location_layout.addWidget(checkbox)
+            self.location_checkboxes.append(checkbox)
 
         groupBox_race_cat = QGroupBox("Race Category")
+        ## List of race categories
         race_categories = [y for y in self.df["Category"]]
         race_categories = set(race_categories)
 
         race_cat_layout = QVBoxLayout(groupBox_race_cat)
-        self.race_cat_checkboxes = [] ## store bcheckboxes
+        self.race_cat_checkboxes = [] ## store checkboxes
         for race_cat in race_categories:
             checkbox = QCheckBox(race_cat, self)
-            checkbox.toggled.connect(self.update_race_details_table)
+            checkbox.toggled.connect(self.update_table)
             race_cat_layout.addWidget(checkbox)
             self.race_cat_checkboxes.append(checkbox)
 
@@ -97,6 +101,11 @@ class layout(QWidget):
 
         grid_layout.addWidget(groupBox_races, 3,0,1,3)
 
+        ## Connect dataChanged signal to update table
+        self.date_edit1.dateChanged.connect(self.update_table)
+        self.date_edit2.dateChanged.connect(self.update_table)
+
+
         self.display_dataframe_in_table(self.df)
 
         self.setLayout(grid_layout)
@@ -114,9 +123,21 @@ class layout(QWidget):
                 item = QTableWidgetItem(str(value))
                 self.races_table.setItem(row_index, col_index, item)
 
-    def update_race_details_table(self):
+    def update_table(self):
         selected_race_categories = [checkbox.text() for checkbox in self.race_cat_checkboxes if checkbox.isChecked()]
-        filtered_df = self.df[self.df["Category"].isin(selected_race_categories)]
+        selected_locations = [checkbox.text() for checkbox in self.location_checkboxes if checkbox.isChecked()]
+        selected_start_date = self.date_edit1.date().toPython()
+        selected_end_date = self.date_edit2.date().toPython()
+
+        # Convert "StartDate" and "EndDate" columns to datetime.date
+        self.df["StartDate"] = pd.to_datetime(self.df["StartDate"]).dt.date
+        self.df["EndDate"] = pd.to_datetime(self.df["EndDate"]).dt.date
+        
+        filtered_df = self.df[(self.df["Category"].isin(selected_race_categories)) &
+                               (self.df["Counter_Code"].isin(selected_locations)) &
+                               ((self.df["StartDate"] >= selected_start_date)&
+                                (self.df["EndDate"] <= selected_end_date)
+                                )]
         self.display_dataframe_in_table(filtered_df)
 
 
