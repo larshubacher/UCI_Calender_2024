@@ -1,4 +1,4 @@
-from PySide6.QtWidgets import QWidget, QScrollArea, QCheckBox, QCalendarWidget, QTableWidgetItem, QTableWidget, QGridLayout, QPushButton, QGroupBox, QDateEdit, QLabel, QHBoxLayout, QVBoxLayout, QFileDialog
+from PySide6.QtWidgets import QWidget, QComboBox,QScrollArea, QCheckBox, QCalendarWidget, QTableWidgetItem, QTableWidget, QGridLayout, QPushButton, QGroupBox, QDateEdit, QLabel, QHBoxLayout, QVBoxLayout, QFileDialog
 from PySide6.QtWebEngineWidgets import QWebEngineView
 from PySide6.QtCore import Qt
 import folium
@@ -26,7 +26,7 @@ class layout(QWidget):
 
         ## load csv
         path = "data/uci_calender_2024.csv"
-        df = pd.read_csv(path)
+        self.df = pd.read_csv(path)
 
         ## Map placeholder
         self.groupBox_map = QGroupBox("Map", self)
@@ -54,7 +54,7 @@ class layout(QWidget):
 
         groupBox_locations = QGroupBox("Locations")
         ## list of countriess
-        countries = [x for x in df["Counter_Code"]]
+        countries = [x for x in self.df["Counter_Code"]]
         countries = set(countries)
 
         location_layout = QVBoxLayout(groupBox_locations)
@@ -63,13 +63,16 @@ class layout(QWidget):
             location_layout.addWidget(checkbox)
 
         groupBox_race_cat = QGroupBox("Race Category")
-        race_categories = [y for y in df["Category"]]
+        race_categories = [y for y in self.df["Category"]]
         race_categories = set(race_categories)
 
         race_cat_layout = QVBoxLayout(groupBox_race_cat)
+        self.race_cat_checkboxes = [] ## store bcheckboxes
         for race_cat in race_categories:
             checkbox = QCheckBox(race_cat, self)
+            checkbox.toggled.connect(self.update_race_details_table)
             race_cat_layout.addWidget(checkbox)
+            self.race_cat_checkboxes.append(checkbox)
 
     
         groupBox_races = QGroupBox("Race details")
@@ -93,23 +96,28 @@ class layout(QWidget):
 
 
         grid_layout.addWidget(groupBox_races, 3,0,1,3)
-        self.display_csv_in_table(path)
+
+        self.display_dataframe_in_table(self.df)
 
         self.setLayout(grid_layout)
 
-    def display_csv_in_table(self, csv_filename):
-        with open(csv_filename, newline='') as csvfile:
-            reader = csv.reader(csvfile)
-            header = next(reader)
-            self.races_table.setColumnCount(len(header))
-            self.races_table.setHorizontalHeaderLabels(header)
+    def display_dataframe_in_table(self, df):
+        self.races_table.setRowCount(0)  # Clear existing rows
 
-            for row_index, row in enumerate(reader):
-                self.races_table.insertRow(row_index)
-                for col_index, value in enumerate(row):
-                    item = QTableWidgetItem(value)
-                    self.races_table.setItem(row_index, col_index, item)
+        header = df.columns.tolist()
+        self.races_table.setColumnCount(len(header))
+        self.races_table.setHorizontalHeaderLabels(header)
 
+        for row_index in range(len(df)):
+            self.races_table.insertRow(row_index)
+            for col_index, value in enumerate(df.iloc[row_index]):
+                item = QTableWidgetItem(str(value))
+                self.races_table.setItem(row_index, col_index, item)
+
+    def update_race_details_table(self):
+        selected_race_categories = [checkbox.text() for checkbox in self.race_cat_checkboxes if checkbox.isChecked()]
+        filtered_df = self.df[self.df["Category"].isin(selected_race_categories)]
+        self.display_dataframe_in_table(filtered_df)
 
 
         
