@@ -2,9 +2,11 @@ from PySide6.QtWidgets import QWidget, QComboBox,QScrollArea, QCheckBox, QCalend
 from PySide6.QtWebEngineWidgets import QWebEngineView
 from PySide6.QtCore import Qt
 import folium
+from folium.plugins import MarkerCluster
 import pandas as pd
 import sys
-import csv
+from io import BytesIO
+import os
 
 
 class time_filter_widget(QWidget):
@@ -52,12 +54,12 @@ class layout(QWidget):
 
         group_layout.addLayout(date_layout1)
         group_layout.addLayout(date_layout2)
-        groupBox_locations = QGroupBox("Locations")
+        groupBox_locations = QGroupBox("Locations", self)
         ## list of countriess
         countries = [x for x in self.df["Counter_Code"]]
-        countries = set(countries)
+        countries = sorted(set(countries))
 
-        location_layout = QVBoxLayout(groupBox_locations)
+        location_layout = QHBoxLayout(groupBox_locations)
         self.location_checkboxes = [] ## store checkboxes
         for country in countries:
             checkbox = QCheckBox(country,self)
@@ -68,7 +70,7 @@ class layout(QWidget):
         groupBox_race_cat = QGroupBox("Race Category")
         ## List of race categories
         race_categories = [y for y in self.df["Category"]]
-        race_categories = set(race_categories)
+        race_categories = sorted(set(race_categories))
 
         race_cat_layout = QVBoxLayout(groupBox_race_cat)
         self.race_cat_checkboxes = [] ## store checkboxes
@@ -105,7 +107,6 @@ class layout(QWidget):
         self.date_edit1.dateChanged.connect(self.update_table)
         self.date_edit2.dateChanged.connect(self.update_table)
 
-
         self.display_dataframe_in_table(self.df)
 
         self.setLayout(grid_layout)
@@ -138,7 +139,7 @@ class layout(QWidget):
                                ((self.df["StartDate"] >= selected_start_date)&
                                 (self.df["EndDate"] <= selected_end_date)
                                 )]
+
+
         self.display_dataframe_in_table(filtered_df)
 
-
-        
