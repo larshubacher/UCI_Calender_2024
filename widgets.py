@@ -91,7 +91,7 @@ class layout(QWidget):
 
         ## Grid overview and structure
         grid_layout = QGridLayout()
-        grid_layout.addWidget(self.groupBox_map,0,0)#,2,1) #Take up 2 rows and 1 column
+        grid_layout.addWidget(self.groupBox_map,0,0,2,1) #Take up 2 rows and 1 column
         grid_layout.addWidget(groupBox_timespan,0,1) 
 
         scroll_area_locations = QScrollArea()
@@ -102,7 +102,7 @@ class layout(QWidget):
         scroll_area_race_cat.setWidget(groupBox_race_cat)
         grid_layout.addWidget(scroll_area_race_cat,1,1)
 
-        grid_layout.addWidget(groupBox_races, 3,0)#,1,3)
+        grid_layout.addWidget(groupBox_races, 3,0,1,3)
 
         ## Connect dataChanged signal to update table
         self.date_edit1.dateChanged.connect(self.update_table_and_map)
@@ -126,7 +126,7 @@ class layout(QWidget):
                 self.races_table.setItem(row_index, col_index, item)
 
 
-    def create_folium_map(self, df, selected_categories, selected_nations):
+    def create_folium_map(self, df, selected_categories, selected_nations, start_date=None, end_date=None):
         # Create a Folium map centered around the first data point
         map_view = folium.Map(location=[self.df['Latitude'].iloc[0], self.df['Longitude'].iloc[0]], zoom_start=12)
 
@@ -136,13 +136,17 @@ class layout(QWidget):
             longitude = row['Longitude']
             category = row['Category']
             nation = row['Counter_Code']
+            start_date_point = row['StartDate']
+            end_date_point = row['EndDate']
 
-            # Check for NaN values and if the category and nation are selected
+            # Check for NaN values and if the category and nation are selected within the date range
             if (
                 not np.isnan(latitude) 
                 and not np.isnan(longitude) 
                 and (not selected_categories or category in selected_categories)
                 and (not selected_nations or nation in selected_nations)
+                and (not start_date or start_date_point >= start_date)
+                and (not end_date or end_date_point <= end_date)
             ):
                 folium.Marker([latitude, longitude], popup=row['Location']).add_to(map_view)
 
@@ -154,6 +158,9 @@ class layout(QWidget):
         web_view.setHtml(open("map.html").read())
 
         return web_view
+
+
+
 
     def update_table_and_map(self):
         selected_race_categories = [checkbox.text() for checkbox in self.race_cat_checkboxes if checkbox.isChecked()]
@@ -170,6 +177,15 @@ class layout(QWidget):
                                ((self.df["StartDate"] >= selected_start_date)&
                                 (self.df["EndDate"] <= selected_end_date)
                                 )]
+        
+        # Update the map with the selected filters and date range
+        map_view = self.create_folium_map(filtered_df, selected_race_categories, selected_locations, selected_start_date, selected_end_date)
+
+        # Clear the existing map view and add the updated map view
+        self.map_group_layout.removeWidget(self.map_view)
+        self.map_view.deleteLater()
+        self.map_view = map_view
+        self.map_group_layout.addWidget(self.map_view)
 
 
         self.display_dataframe_in_table(filtered_df)
