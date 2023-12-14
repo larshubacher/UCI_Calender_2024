@@ -1,21 +1,28 @@
-from PySide6.QtWidgets import QWidget, QTableWidget, QCalendarWidget,QTableWidgetItem, QCheckBox, QScrollArea, QGridLayout, QGroupBox, QDateEdit, QLabel, QHBoxLayout, QVBoxLayout, QRadioButton, QButtonGroup, QApplication
+from PySide6.QtWidgets import QWidget, QApplication, QMainWindow, QTableWidget,QTableWidgetItem, QCheckBox, QScrollArea, QGridLayout, QGroupBox, QDateEdit, QLabel, QHBoxLayout, QVBoxLayout
 from PySide6.QtWebEngineWidgets import QWebEngineView
-from PySide6.QtCore import Qt
 import folium
 import pandas as pd
 import numpy as np
+import sys
 
-
-
-class time_filter_widget(QWidget):
+class main_window(QMainWindow):
     def __init__(self):
         super().__init__()
 
-        calendar = QCalendarWidget()
-        calendar.setGridVisible(True)
-        grid_layout = QGridLayout()
-        grid_layout.addWidget(calendar,0,0)
-        self.setLayout(grid_layout)
+        self.setWindowTitle("UCI Calender 2024")
+
+        container = QWidget()
+        containerLayout = QVBoxLayout()
+        container.setLayout(containerLayout)
+
+        layout_widget = layout()
+        containerLayout.addWidget(layout_widget)
+
+        #time_filter = time_filter_widget()
+        #containerLayout.addWidget(time_filter)
+
+        self.setCentralWidget(container)
+
 
 class layout(QWidget):
     def __init__(self):
@@ -191,3 +198,9 @@ class layout(QWidget):
 
         self.display_dataframe_in_table(filtered_df)
 
+
+if __name__ == "__main__":
+    app = QApplication(sys.argv)
+    main_window = main_window()
+    main_window.show()
+    app.exec()
