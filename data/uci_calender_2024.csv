@@ -1,4 +1,4 @@
-Date,Event_Link,Event_Name,Counter_Code,Location,Category,latitute,longitude,Date_Converted,StartDate,EndDate
+Date,Event_Link,Event_Name,Counter_Code,Location,Category,Latitude,Longitude,Date_Converted,StartDate,EndDate
 13 Jan-13 Jan,https://mtbdata.com/comp/israel-cup-1-mishmar-haemek-13-jan-2024-mishmar-haemek,Israel Cup 1 Mishmar Haemek,ISR,Mishmar Haemek,C2,32.6105821,35.1421972,13.01.2023-13.01.2023,2023-01-13,2023-01-13
 20 Jan-20 Jan,https://mtbdata.com/comp/momentum-medical-scheme-attakwas-extreme-presented-by-biogen-xcm-20-jan-2024-oudtshoorn,Momentum Medical Scheme Attakwas Extreme presented by Biogen - XCM,RSA,Oudtshoorn,C1,-33.5902954,22.204206,20.01.2023-20.01.2023,2023-01-20,2023-01-20
 25 Jan-28 Jan,https://mtbdata.com/comp/costa-blanca-bike-race-cbbr-xcms-25-jan-28-jan-2024-calpe-alicante,Costa Blanca Bike Race - CBBR - XCMS,ESP,Calpe (Alicante),S1,38.6443252,0.046012,25.01.2023-28.01.2023,2023-01-25,2023-01-28

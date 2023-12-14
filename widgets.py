@@ -1,12 +1,10 @@
-from PySide6.QtWidgets import QWidget, QComboBox,QScrollArea, QCheckBox, QCalendarWidget, QTableWidgetItem, QTableWidget, QGridLayout, QPushButton, QGroupBox, QDateEdit, QLabel, QHBoxLayout, QVBoxLayout, QFileDialog
+from PySide6.QtWidgets import QWidget, QTableWidget, QCalendarWidget,QTableWidgetItem, QCheckBox, QScrollArea, QGridLayout, QGroupBox, QDateEdit, QLabel, QHBoxLayout, QVBoxLayout, QRadioButton, QButtonGroup, QApplication
 from PySide6.QtWebEngineWidgets import QWebEngineView
 from PySide6.QtCore import Qt
 import folium
-from folium.plugins import MarkerCluster
 import pandas as pd
-import sys
-from io import BytesIO
-import os
+import numpy as np
+
 
 
 class time_filter_widget(QWidget):
@@ -30,11 +28,12 @@ class layout(QWidget):
         path = "data/uci_calender_2024.csv"
         self.df = pd.read_csv(path)
 
+
         ## Map placeholder
         self.groupBox_map = QGroupBox("Map", self)
         self.map_group_layout = QVBoxLayout(self.groupBox_map)
-        #self.map_group_layout.addWidget(self.groupBox_map)
-
+        self.map_view = self.create_folium_map(self.df, [], [])  # Pass empty lists for initial display
+        self.map_group_layout.addWidget(self.map_view)
 
         ## Timespan (from and to)
         groupBox_timespan = QGroupBox("Timespan", self)
@@ -54,16 +53,19 @@ class layout(QWidget):
 
         group_layout.addLayout(date_layout1)
         group_layout.addLayout(date_layout2)
+
+
         groupBox_locations = QGroupBox("Locations", self)
+        location_layout = QVBoxLayout(groupBox_locations)
         ## list of countriess
         countries = [x for x in self.df["Counter_Code"]]
         countries = sorted(set(countries))
 
-        location_layout = QHBoxLayout(groupBox_locations)
+
         self.location_checkboxes = [] ## store checkboxes
         for country in countries:
             checkbox = QCheckBox(country,self)
-            checkbox.toggled.connect(self.update_table)
+            checkbox.toggled.connect(self.update_table_and_map)
             location_layout.addWidget(checkbox)
             self.location_checkboxes.append(checkbox)
 
@@ -76,7 +78,7 @@ class layout(QWidget):
         self.race_cat_checkboxes = [] ## store checkboxes
         for race_cat in race_categories:
             checkbox = QCheckBox(race_cat, self)
-            checkbox.toggled.connect(self.update_table)
+            checkbox.toggled.connect(self.update_table_and_map)
             race_cat_layout.addWidget(checkbox)
             self.race_cat_checkboxes.append(checkbox)
 
@@ -89,7 +91,7 @@ class layout(QWidget):
 
         ## Grid overview and structure
         grid_layout = QGridLayout()
-        grid_layout.addWidget(self.groupBox_map,0,0,2,1) #Take up 2 rows and 1 column
+        grid_layout.addWidget(self.groupBox_map,0,0)#,2,1) #Take up 2 rows and 1 column
         grid_layout.addWidget(groupBox_timespan,0,1) 
 
         scroll_area_locations = QScrollArea()
@@ -100,12 +102,11 @@ class layout(QWidget):
         scroll_area_race_cat.setWidget(groupBox_race_cat)
         grid_layout.addWidget(scroll_area_race_cat,1,1)
 
-
-        grid_layout.addWidget(groupBox_races, 3,0,1,3)
+        grid_layout.addWidget(groupBox_races, 3,0)#,1,3)
 
         ## Connect dataChanged signal to update table
-        self.date_edit1.dateChanged.connect(self.update_table)
-        self.date_edit2.dateChanged.connect(self.update_table)
+        self.date_edit1.dateChanged.connect(self.update_table_and_map)
+        self.date_edit2.dateChanged.connect(self.update_table_and_map)
 
         self.display_dataframe_in_table(self.df)
 
@@ -124,7 +125,37 @@ class layout(QWidget):
                 item = QTableWidgetItem(str(value))
                 self.races_table.setItem(row_index, col_index, item)
 
-    def update_table(self):
+
+    def create_folium_map(self, df, selected_categories, selected_nations):
+        # Create a Folium map centered around the first data point
+        map_view = folium.Map(location=[self.df['Latitude'].iloc[0], self.df['Longitude'].iloc[0]], zoom_start=12)
+
+        # Add markers for each data point, handling NaN values
+        for index, row in self.df.iterrows():
+            latitude = row['Latitude']
+            longitude = row['Longitude']
+            category = row['Category']
+            nation = row['Counter_Code']
+
+            # Check for NaN values and if the category and nation are selected
+            if (
+                not np.isnan(latitude) 
+                and not np.isnan(longitude) 
+                and (not selected_categories or category in selected_categories)
+                and (not selected_nations or nation in selected_nations)
+            ):
+                folium.Marker([latitude, longitude], popup=row['Location']).add_to(map_view)
+
+        # Save the map to an HTML file
+        map_view.save("map.html")
+
+        # Display the map in a QWebEngineView
+        web_view = QWebEngineView()
+        web_view.setHtml(open("map.html").read())
+
+        return web_view
+
+    def update_table_and_map(self):
         selected_race_categories = [checkbox.text() for checkbox in self.race_cat_checkboxes if checkbox.isChecked()]
         selected_locations = [checkbox.text() for checkbox in self.location_checkboxes if checkbox.isChecked()]
         selected_start_date = self.date_edit1.date().toPython()
