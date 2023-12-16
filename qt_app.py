@@ -4,6 +4,9 @@ import folium
 import pandas as pd
 import numpy as np
 import sys
+import os
+
+path = os.path.join(os.path.dirname(__file__), "data", "uci_calender_2024.csv")
 
 class main_window(QMainWindow):
     def __init__(self):
