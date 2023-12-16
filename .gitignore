@@ -1,0 +1,12 @@
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.venv/
+poetry.lock
+__pypackages__/
+.vscode/
+Qt_Designer/
+QT_lectures/
+selenium_webscraping/
+widgets/
